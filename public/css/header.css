@@ -1,0 +1,194 @@
+/*css reset*/
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
+}
+a{
+  color:#ffffff;
+  text-decoration: none;
+}
+p{
+  color:#ffffff;
+}
+/*nav������*/
+.nav{
+  width: 100%;
+  height: 80px;
+  background: #012A12;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 140px;
+}
+.nav>span{
+  display: block;
+  line-height: 80px;
+  color: #ffffff;
+}
+.nav>img{
+  width: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.nav>ul{
+  width:800px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav>ul>li>a{
+  line-height: 80px;
+  font-size: 17px;
+}
+.nav>ul>li>a:hover{
+  color: #ffc001;
+}
+.nav>ul>li>ul{
+  display: none; 
+  float: left;
+  margin-top: 80px;
+  margin-right: -120px;
+  position: relative;
+  left: -38px;
+  padding-top: 10px;
+}
+.nav>ul>li:last-child:hover>ul{
+  display: block;
+}
+.nav>ul>li>ul>li{
+  display: block;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
+  background: #012A12;
+  margin-bottom: 10px;
+}
+.nav>ul>li>ul>li>a{
+  font-size:14px;
+}
+/* sidebar */
+.sidebar{
+width: 32px;
+height: 100%;
+background: #000000;
+position: fixed;
+overflow: visible;
+right: 0px;
+padding:66px 0px;
+}
+.sidebar>.side div:last-child{
+margin-top: 450px;
+}
+.side img{
+display: block;
+margin: 0 auto;
+width: 70%;
+}
+.sidebar .side .second{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+/* 侧边栏的二维码 */
+.side:nth-child(2){
+  position: relative;
+}
+.sidebar .side:nth-child(2)>a:nth-child(2):hover{
+  display: block;
+}
+.qrCode{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: #fff;
+  position: absolute;
+  bottom: 126px;
+  right: 33px;
+  display: none;
+}
+.qrCode>img{
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+/*bannerͼ*/
+.banner{
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+.banner>img{
+  width: 100%;
+}
+/* login */
+#mask{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+}
+#login{
+  position: absolute;
+  width: 500px;
+  height: 440px;
+  background: #023818;
+  border-radius: 15px;
+  left: 50%;
+  margin-left: -250px;
+  top: 50%;
+  margin-top: -220px;
+  padding: 30px;
+}
+#close{
+  position: absolute;
+  color: #ffffff;
+  font-size: 50px;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+}
+#login>p{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+#login>input,
+#btn_login{
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 0;
+}
+#login>input{
+  padding-left: 20px;
+}
+#btn_login{
+  font: 18px "微软雅黑";
+  cursor: pointer;
+}
+#d1{
+  display: flex;  
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+#d1>span{
+  margin: 0 5px;
+  color: #ffffff;
+}
+#d1+a{
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  text-align: center;
+}

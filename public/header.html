@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/header.css">
+</head>
+
+<body>
+  <!-- header -->
+  <div class="sidebar">
+    <div class="side">
+      <div>
+        <a href="login.html">
+          <img src="images/index/user.png" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="contact_us.html"><img src="images/index/留言.png" alt=""></a>
+        <a href="javascript:;"><img class="second" src="images/index/二维码.png" alt=""></a>
+        <a href="#nav"><img src="images/index/top.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <div id="nav" class="nav">
+    <span>丝诺雪&copy;SNOWSILK 2019</span>
+    <img src="images/index/nav_logo.png" alt="" />
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="intro.html">公司简介</a></li>
+      <li><a href="pet_supplies.html">宠物用品</a></li>
+      <li><a href="shopping_cart.html">购物车</a></li>
+      <li><a href="pet_type.html">在售宠物</a></li>
+      <li><a href="contact_us.html">联系我们</a></li>
+      <li><a href="javascript:;">登录</a>
+        <ul>
+          <li> <a href="login.html">会员登录</a> </li>
+          <li> <a href="reg.html">会员注册</a> </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="banner">
+    <img src="images/index/banner1.jpg" alt="" id="lunbo"/>
+  </div>
+  <script>
+    var lb = document.getElementById("lunbo");
+    var num = 1;
+    // 自动换图
+    setInterval(function () {
+      num++;
+      if (num == 3) {
+        num = 1;
+      }
+      lb.src = `images/index/banner${num}.jpg`;
+    }, 2000)
+  </script>
+</body>
+
+</html>

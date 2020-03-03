@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>购物车</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/shopping_cart.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+  <!-- header -->
+  <div class="sidebar">
+    <div class="side">
+      <div><a href=""><img src="images/index/user.png" alt=""></a></div>
+      <div>
+        <a href=""><img src="images/index/留言.png" alt=""></a>
+        <a href=""><img class="second" src="images/index/二维码.png" alt=""></a>
+        <a href="#nav"><img src="images/index/top.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <div id="nav" class="nav">
+    <span>丝诺雪&copy;SNOWSILK 2019</span>
+    <img src="images/index/nav_logo.png" alt="" />
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="intro.html">公司简介</a></li>
+      <li><a href="pet_supplies.html">宠物用品</a></li>
+      <li><a href="shopping_cart.html">购物车</a></li>
+      <li><a href="pet_type.html">在售宠物</a></li>
+      <li><a href="contact_us.html">联系我们</a></li>
+      <li><a href="javascript:;">登录</a>
+        <ul>
+          <li> <a href="login.html">会员登录</a> </li>
+          <li> <a href="reg.html">会员注册</a> </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- login -->
+  <div id="mask">
+    <div id="login">
+      <span id="close" onclick="close_login()">×</span>
+      <p>登录</p>
+      <input type="text" placeholder="请输入用户名">
+      <input type="text" placeholder="请输入密码">
+      <button id="btn_login">登录</button>
+      <div id="d1">
+        <a href="">忘记密码</a>
+        <span>|</span>
+        <a href=""> 注册</a>
+      </div>
+      <a href="">第三方账号登录</a>
+    </div>
+  </div>
+  <!-- body -->
+  <div class="container">
+    <div class="body" id="body">
+      <ul>
+        <li>选择</li>
+        <li>商品</li>
+        <li>单价</li>
+        <li>数量</li>
+        <li>小计</li>
+        <li>操作</li>
+      </ul>
+      <div class="list_body">
+        <ul>
+          <li><input data-click="input" type="checkbox"></li>
+          <li>渴望全犬期鸡肉狗粮</li>
+          <li>￥67.00</li>
+          <li>
+            <div data-click="div">-</div>
+            <span>1</span>
+            <div data-click="div">+</div>
+          </li>
+          <li>￥67.00</li>
+          <li data-click="delete">删除</li>
+        </ul>
+        <ul>
+          <li><input data-click="input" type="checkbox"></li>
+          <li>猫粮</li>
+          <li>￥67.00</li>
+          <li>
+            <div data-click="div">-</div>
+            <span>1</span>
+            <div data-click="div">+</div>
+          </li>
+          <li>￥67.00</li>
+          <li data-click="delete">删除</li>
+        </ul>
+      </div>
+      <ul>
+        <li><input data-click="inputAll" type="checkbox">&nbsp;&nbsp;全选</li>
+        <button id="btnDel">删除选中商品</button>
+        <li>共<span>1</span>件商品</li>
+        <li>总价：<span>￥0.00</span></li>
+        <li>结算</li>
+      </ul>
+    </div>
+  </div>
+  <!-- js代码 -->
+  <script>
+    // login事件
+    function show_login() {
+      document.getElementById("mask").style.display = "block";
+    }
+    function close_login() {
+      document.getElementById("mask").style.display = "none";
+    }
+    // 购物车商品数量加减和费用计算
+    var body = document.getElementById("body");
+    body.onclick = function (e) {
+      if (e.target.getAttribute("data-click") == "div") {
+        var span = e.target.parentNode.children[1];
+        // 修改元素
+        var n = parseInt(span.innerHTML);
+        // console.log(n);
+        if (e.target.innerHTML == "+") {
+          n++;
+        } else if (n > 1) {
+          n--;
+        }
+        span.innerHTML = n;
+        var subTotal = e.target.parentNode.nextElementSibling;
+        var price = parseInt(e.target.parentNode.previousElementSibling.innerHTML.slice(1));
+        var sub = price * n;
+        subTotal.innerHTML = `￥${sub.toFixed(2)}`;
+        // 修改总计
+        var liTotal = document.querySelector("div.body>ul:last-child>li:nth-child(4)>span");
+        var everySubTotal = document.querySelectorAll("div.list_body>ul>li:nth-child(5)");
+        var total = 0;
+        for (var li of everySubTotal) {
+          total += parseInt(li.innerHTML.slice(1));
+        }
+        liTotal.innerHTML = `￥${total}`;
+      }
+      // checkbox事件
+      if (e.target.nodeName == "INPUT") {
+        if (e.target.getAttribute("data-click") == "inputAll") {
+          var checks = document.querySelectorAll(".list_body>ul>li>input");
+          for (var check of checks) {
+            check.checked = e.target.checked;
+          }
+        } else {
+          // 多选一
+          var checkAll = document.querySelector(".body>ul:last-child>li>input");
+          var uncheck = document.querySelectorAll(".list_body>ul>li>input:not(:checked)");
+          // 修改元素
+          if (uncheck.length != 0) {
+            checkAll.checked = false;
+          } else {
+            checkAll.checked = true;
+          }
+        }
+      }
+      // 末尾删除
+      if (e.target.getAttribute("data-click") == "delete") {
+        var listBody = document.querySelector("div.list_body");
+        var ul = e.target.parentNode;
+        listBody.removeChild(ul);
+      }
+    }
+    // 删除选定
+    var btnDel = document.getElementById("btnDel");
+    btnDel.onclick = function () {
+      var listBody = document.querySelector("div.list_body");
+      var checks = document.querySelectorAll(".list_body>ul>li>input:checked");
+      for (var check of checks) {
+        listBody.removeChild(check.parentNode.parentNode);
+      }
+    }
+  </script>
+</body>
+
+</html>

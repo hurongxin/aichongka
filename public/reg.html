@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>注册</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/reg.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+  <!-- header -->
+  <div class="sidebar">
+    <div class="side">
+      <div><a href=""><img src="images/index/user.png" alt=""></a></div>
+      <div>
+        <a href=""><img src="images/index/留言.png" alt=""></a>
+        <a href=""><img class="second" src="images/index/二维码.png" alt=""></a>
+        <a href="#nav"><img src="images/index/top.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <div id="nav" class="nav">
+    <span>丝诺雪&copy;SNOWSILK 2019</span>
+    <img src="images/index/nav_logo.png" alt="" />
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="intro.html">公司简介</a></li>
+      <li><a href="pet_supplies.html">宠物用品</a></li>
+      <li><a href="shopping_cart.html">购物车</a></li>
+      <li><a href="pet_type.html">在售宠物</a></li>
+      <li><a href="contact_us.html">联系我们</a></li>
+      <li><a href="javascript:;">登录</a>
+        <ul>
+          <li> <a href="javasscript:;" onclick="show_login()">会员登录</a> </li>
+          <li> <a href="reg.html">会员注册</a> </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- body -->
+  <div class="body">
+    <div class="reg">
+      <ul>
+        <li>手机注册</li>
+      </ul>
+      <span id="msg_phone"></span>
+      <input id="phone" type="text" placeholder="手机号" onblur="blur_phone()">
+      <span id="msg_upwd"></span>
+      <input id="upwd" type="text" placeholder="密码" onfocus="focus_upwd()" onblur="blur_upwd()">
+      <span id="msg_epwd"></span>
+      <input id="epwd" type="text" placeholder="确认密码" onfocus="focus_epwd()" onblur="blur_epwd()">
+      <span id="msg_code"></span>
+      <div class="auth_code">
+        <input id="code" type="text" placeholder="验证码" onblur="blur_code()">
+        <canvas id="canvas" onclick="dj()"></canvas>
+        <a href="#" onclick="createCode()">看不清楚？换一张</a>
+      </div>
+      <button onclick="reg()">注册</button>
+      <div class="down">
+        <input type="checkbox" checked="checked">
+        <span>我已阅读并同意<a href="#">《用户注册协议》</a></span>
+        <span>已有账号？<a href="login.html">立即登录</a></span>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="foot">
+    <div>
+      <p>&copy;2020爱宠咖服务有限公司 版权所有</p>
+      <a href="#">管理员登录</a>
+    </div>
+  </div>
+  <script src="js/reg.js"></script>
+</body>
+
+</html>

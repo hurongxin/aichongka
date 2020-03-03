@@ -1,0 +1,102 @@
+.container{
+  width: 100%;
+  background: #023818;
+  margin-top: -4px;
+}
+.food{
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+.food>img{
+  display: block;
+  width: 79px;
+  height: 84px;
+  margin: 0 auto;
+}
+.food::before{
+  content: "";
+  display: table;
+}
+.food p:nth-child(2){
+  font: 28px "微软雅黑";
+  margin-top: 5px;
+}
+.food p:last-child{
+  font: 16px "微软雅黑";
+  margin-top: 5px;
+}
+.product{
+  width:1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.product>.thing{
+  width: 48%;
+  margin-bottom: 10px;
+}
+.thing img{
+  width:100%;
+}
+.thing>div{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.thing>div>a{
+  display: block;
+  width: 100px;
+  height: 30px;
+  line-height: 25px;
+  text-align: center;
+  margin-top: 11px;
+  border:1px solid #fff;
+  border-radius: 20px;
+}
+.thing p{
+  font: 24px "微软雅黑";
+  margin: 10px 0 10px 0;
+}
+.thing p:last-child{
+  display: block;
+  font-size: 15px;
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+  line-height: 30px;
+}
+.shopping{
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.store{
+  width: 24%;
+  margin-bottom: 20px;
+}
+.store>img{
+  width: 100%;
+}
+.store>p{
+  font: 14px "微软雅黑";
+  margin: 10px 0 10px 0;
+}
+.store>div{
+  display: flex;
+  justify-content: space-between;
+}
+/* footer */
+.foot{
+  width: 100%;
+  padding: 30px 20px;
+  background: #011308;
+}
+.foot>div{
+  width:1000px;
+  margin: 0 auto;
+  text-align: center;
+}

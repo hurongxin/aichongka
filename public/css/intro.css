@@ -1,0 +1,92 @@
+.container{
+  width: 100%;
+  background: #023818;
+  margin-top: -4px;
+}
+.container>.company{
+  width: 1000px;
+  margin :50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.company>.left{
+  width: 450px;
+  height: 300px;
+  background: #026C36;
+  padding-top: 112px;
+}
+.company>.left>p{
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+}
+.company>.left>p:last-child{
+  font-size: 20px;
+  margin-top: 5px;
+}
+.company>p{
+  display: block;
+  width: 520px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 23px;
+}
+.picture{
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.picture img{
+  width: 32%;
+  margin-bottom: 30px;
+  transition:0.5s;
+}
+.picture img:hover{
+  transform: scale(1.1);
+}
+.link,.people{
+  width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.link>div>p:first-child{
+  font: 26px "微软雅黑";
+}
+.link>div>p:last-child{
+  font: 14px "微软雅黑";
+}
+.link>a{
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-size: 18px;
+  width: 183px;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+}
+.people>div{
+  display: flex;
+  flex-flow: row wrap;
+}
+.people>div>img{
+  width:23%;
+  margin: 20px 20px 0px 0px;
+}
+.people>div>img:hover{
+  box-shadow: -5px -5px 0px #ffc001;
+}
+.foot{
+  width: 100%;
+  padding: 30px 20px;
+  background: #011308;
+}
+.foot>div{
+  width:1000px;
+  margin: 0 auto;
+  text-align: center;
+}

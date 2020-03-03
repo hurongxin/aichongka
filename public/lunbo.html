@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    #fade>img{
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="fade">
+    <img src="images/index/banner1.jpg" id="lunbo">
+  </div>
+  <script>
+    var lb = document.getElementById("lunbo")
+    var num = 1;
+    // 自动换图
+    setInterval(function () {
+      num++;
+      if (num == 3) {
+        num = 1;
+      }
+      lb.src = "images/index/banner" + num + ".jpg"
+    }, 3000)
+/*
+    // 点击左箭头换图
+    left.onclick = function () {
+      num--;
+      if (num == 0) {
+        num = 1;
+      }
+      lb.src = "img/" + num + ".jpg"
+
+    }
+    // 点击右键换箭头
+    right.onclick = function () {
+      num++;
+      if (num == 5) {
+        num = 4;
+      }
+      lb.src = "img/" + num + ".jpg"
+    }
+    // 点击圆点换图
+    var allLi = document.getElementsByTagName('ul')[0].getElementsByTagName("li");
+    for (var i = 0; i < allLi.length; i++) {
+      // 给每个li元素赋值，每循环一次，i+1;
+      allLi[i].index = i;
+      allLi[i].onclick = function () {
+        // li的索引是从0开始的，所以要+1
+        var num = this.index + 1;
+        lb.src = "img/" + num + ".jpg"
+      }
+    }*/
+  </script>
+</body>
+
+</html>

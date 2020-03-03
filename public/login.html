@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+<!-- header -->
+<div class="sidebar">
+  <div class="side">
+    <div><a href=""><img src="../images/index/user.png" alt=""></a></div>
+    <div>
+      <a href=""><img src="../images/index/留言.png" alt=""></a>
+      <a href=""><img class="second" src="../images/index/二维码.png" alt=""></a>
+      <a href="#nav"><img src="../images/index/top.png" alt=""></a>
+    </div>
+  </div>
+</div>
+<div id="nav" class="nav">
+  <span>丝诺雪&copy;SNOWSILK 2019</span>
+  <img src="../images/index/nav_logo.png" alt=""/>
+  <ul>
+    <li><a href="index.html">首页</a></li>
+    <li><a href="intro.html">公司简介</a></li>
+    <li><a href="pet_supplies.html">宠物用品</a></li>
+    <li><a href="shopping_cart.html">购物车</a></li>
+    <li><a href="pet_type.html">在售宠物</a></li>
+    <li><a href="contact_us.html">联系我们</a></li>
+    <li><a href="javascript:;">登录</a>
+      <ul>
+        <li> <a href="javascript:;" onclick="show_login()">会员登录</a> </li>
+        <li> <a href="reg.html">会员注册</a> </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- body -->
+<div class="body">
+  <div class="log">
+    <p>登录</p>
+    <span id="phone_msg" class="vali_info">请输入11位手机号</span>
+    <input type="text" id="phone" placeholder="手机号"/>
+    <span id="upwd_msg" class="vali_info">请输入6-8位密码</span>
+    <input type="text" id="upwd" placeholder="密码"/>
+    <button id="btn_login">登录</button>
+    <div class="reg">
+      <a href="#">忘记密码</a>
+      <p>&nbsp;|&nbsp;</p>
+      <a href="reg.html">注册</a>
+    </div>
+  </div>
+</div>
+<!-- footer -->
+<div class="foot">
+  <div>
+    <p>&copy;2020爱宠咖服务有限公司 版权所有</p>
+    <a href="#">管理员登录</a>
+  </div>
+</div>
+<script src="js/login.js"></script>
+</body>
+</html>

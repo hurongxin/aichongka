@@ -1,0 +1,88 @@
+
+.body{
+  width: 100%;
+  background: #084e23;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+.body>.log{
+  width: 400px;
+  margin: 80px auto;
+  background:#023818;
+  border-radius: 7px;
+  padding: 15px 30px 30px;
+}
+.body>.log>p{
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 0 20px;
+}
+.body>.log>input{
+ display: block;
+ height: 40px;
+ line-height: 38px;
+ border: 1px solid #ccc;
+ padding: 0 10px;
+ outline: none;
+ color: #262e39;
+ border-radius: 3px;
+ width: 100%;
+ margin-bottom: 25px;
+}
+.vali_info{
+  display: none;
+}
+.vali_success,.vali_fail{
+ font-size: 12px;
+ float: right;
+ color: #F44336;
+ margin-top: -20px;
+ background-repeat:no-repeat;
+ display: block;
+}
+.vali_success{
+  background-image: url("../images/ok.png");
+  padding-left:18px;
+  width:0px;
+  height:20px;
+  overflow: hidden;
+}
+.vali_fail{
+  background-image:url("../images/err.png");
+  color:Red;
+  padding-left:20px;
+}
+.body>.log>button{
+ color: #fff;
+ background-color: #06a041;
+ border: 1px solid #06a041;
+ border-radius: 4px;
+ width: 100%;
+ height: 40px;
+ font-size: 14px;
+ line-height: 40px;
+ margin-bottom: 18px;
+}
+.reg{
+ float: right;
+ display: flex;
+ font-size: 12px;
+ text-align: right;
+ padding-top: 2px;
+ margin-bottom: 18px;
+}
+.reg>a,.reg>p{
+ color: #aaa;
+}
+/* footer */
+.foot{
+  width: 100%;
+  padding: 30px 20px;
+  background: #011308;
+}
+.foot>div{
+  width:1000px;
+  margin: 0 auto;
+  text-align: center;
+}
